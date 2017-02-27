@@ -1,0 +1,11 @@
+{
+  "name": "smoke-cheap",
+  "version": "0.0.1",
+  "description": "AMP Product list for Smoke.Cheap",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Tim Brockman",
+  "license": "MIT"
+}
