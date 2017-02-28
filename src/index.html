@@ -4,12 +4,9 @@
   <meta charset="utf-8">
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   
-  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
   <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
-  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 
   <link rel="canonical" href="https://smoke.cheap/">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -20,9 +17,6 @@
      
     article#preview {
       background-color: #f5f5f5;
-    }
-    amp-carousel {
-      margin: 0;
     }
      
     .header {
@@ -55,95 +49,7 @@
       height: 32px;
     }
      
-    .header form {
-      padding: 0;
-    }
-    .header input::-webkit-search-decoration,
-    .header input::-webkit-search-cancel-button {
-      display: none;
-    }
-    .header input[type=submit] {
-      position:absolute;
-      top:10px; right:8px;
-      background-color: #eb407a;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: -webkit-image-set(
-        url('/img/ic_search_white_1x_web_24dp.png') 1x,
-        url('/img/ic_search_white_2x_web_24dp.png') 2x
-      );
-      border: 0 none;
-      height: 32px;
-      width: 36px;
-      -webkit-appearance: none;
-      border-radius: 0;
-      -moz-border-top-right-radius: 4px;
-      -moz-border-bottom-right-radius: 4px;
-      -webkit-border-top-right-radius: 4px;
-      -webkit-border-bottom-right-radius: 4px;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-    }
-    .header input[type=search] {
-      position: absolute;
-      top: 10px; 
-      right: 24px;
-      background: #ededed ;
-      padding: 0 8px;
-      width: 20vw;
-      height: 32px;
-      font-family: inherit;
-      font-size: 100%;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      -webkit-appearance: none;
-      border: solid 0px #ccc;
-      border-radius: 0;
-      -moz-border-top-left-radius: 4px;
-      -moz-border-bottom-left-radius: 4px;
-      -webkit-border-top-left-radius: 4px;
-      -webkit-border-bottom-left-radius: 4px;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      -webkit-transition: all .9s;
-      -moz-transition: all .9s;
-      transition: all .9s ease;
-    }
-    .header input[type=search]:focus {
-      box-sizing: border-box;
-      width: 80vw;
-      max-width: 700px;
-      height: 32px;
-      background-color: #fff;
-      border-color: #eb407a;
-      -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-      -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-      box-shadow: 0 0 5px rgba(109,207,246,.5);
-      outline:none;
-    }
-    .header input:-moz-placeholder,
-    .header input::-webkit-input-placeholder {
-      color: #999;
-    }
-    .header input:focus + #sample-logo {
-      visibility: hidden;
-      opacity: 0;
-      transition: visibility 0s 0.7s, opacity 0.7s ease;
-    }
-    .header input + #sample-logo {
-      visibility: visible;
-      opacity: 1;
-      transition: opacity 1.5s ease;
-    }
-    @media (min-width: 600px) {
-      .header input[type=search] {
-        width: 100px;
-      }
-      .header input[type=search]:focus {
-        width: 600px;
-      }
-    }
+
      
     .items,
     amp-list.items > div {
@@ -190,12 +96,6 @@
     .tile .star {
       color: black;
     }
-    .product-carousel {
-      margin: 16px;
-    }
-    .product-carousel .tile {
-      margin: 8px 0;
-    }
     #hero-images {
         object-fit: contain;
     }
@@ -219,147 +119,12 @@
 <body>
   
   
-  <amp-sidebar id="drawermenu" layout="nodisplay">
-    <div class="topheader">
-      <a href="/" class="home">Products by Example</a>
-    </div>
-    <hr/>
-    <h4 class="category expanded"><a href="/samples_templates/product_listing/preview/">Fruit</a></h4>
-    <h4 class="category"><a href="/samples_templates/product_listing/preview/">Vegetable</a></h4>
-    <h4 class="category"><a href="/samples_templates/product_listing/preview/">More</a></h4>
-  </amp-sidebar>
-  
-  
   <div class="header">
-    <a id="sample-menu" on="tap:drawermenu.toggle">
-      <amp-img srcset="/img/ic_menu_white_1x_web_24dp.png 1x, /img/ic_menu_white_2x_web_24dp.png 2x" width="24" height="24" alt="navigation"></amp-img>
-    </a>
-    <form  method="GET" action="https://ampbyexample.com/samples_templates/product_listing/source/search" target="_top">
-      <input name="search" type="search" placeholder="Search">
-      <a id="sample-logo" href="/">Products by Example</a>
-      <input type="submit" value="">
-    </form>
+    <a id="sample-logo" href="/">Products by Example</a>
   </div>
 
-  
-  
-  <amp-carousel id="hero-images" width="1024" height="480" layout="responsive" type="slides" autoplay>
-    <a href="#">
-      <amp-img src="/img/product_hero1_1024x683.jpg" layout="fill" alt="product hero 1" attribution="visualhunt"></amp-img>
-      <div class="caption">The 10 best Apples</div>
-    </a>
-    <a href="#">
-      <amp-img src="/img/product_hero2_1024x683.jpg" layout="fill" alt="product hero 2" attribution="visualhunt"></amp-img>
-      <div class="caption">So much orange!</div>
-    </a>
-    <a href="#">
-      <amp-img src="/img/product_hero3_1024x683.jpg" layout="fill" alt="product hero 3" attribution="visualhunt"></amp-img>
-      <div class="caption">So healthy.</div>
-    </a>
-  </amp-carousel>
-
-  <h5>Fruits</h5>
-
-  <div class="items">
-    
-    <a class="tile item" href="/samples_templates/product//source">
-      <amp-img width="640"
-               height="426"
-               layout="responsive"
-               alt="Apple"
-               src="/img/product1_640x426.jpg"></amp-img>
-           <p class="name">Apple</p>
-           <p class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-           <p class="price">$1.99</p>
-  </a>
-  
-    <a class="tile item" href="/samples_templates/product//source">
-      <amp-img width="640"
-               height="426"
-               layout="responsive"
-               alt="Orange"
-               src="/img/product2_640x426.jpg"></amp-img>
-           <p class="name">Orange</p>
-           <p class="star">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-           <p class="price">$0.99</p>
-  </a>
-  
-    <a class="tile item" href="/samples_templates/product//source">
-      <amp-img width="640"
-               height="426"
-               layout="responsive"
-               alt="Pear"
-               src="/img/product3_640x426.jpg"></amp-img>
-           <p class="name">Pear</p>
-           <p class="star">&#9733;&#9733;&#9733;&#9734;&#9734;</p>
-           <p class="price">$1.50</p>
-  </a>
-  
-    <a class="tile item" href="/samples_templates/product//source">
-      <amp-img width="640"
-               height="426"
-               layout="responsive"
-               alt="Banana"
-               src="/img/product4_640x426.jpg"></amp-img>
-           <p class="name">Banana</p>
-           <p class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-           <p class="price">$1.50</p>
-  </a>
-  
-</div>
-
-
-
-<h5 class="deals">Recommendations</h5>
-  
-  <amp-carousel class="product-carousel" width="auto" height="160" layout="fixed-height" type="carousel" autoplay>
-    <a class="tile" href="#" role="listitem">
-      <amp-img width="640" height="426" layout="responsive" alt="Apple" src="/img/product1_640x426.jpg"></amp-img>
-      <p class="name">Apple</p>
-      <p class="star">★★★★★</p>
-      <p class="price">$1.99</p>
-    </a><a class="tile" href="#" role="listitem">
-      <amp-img width="640" height="426" layout="responsive" alt="Orange" src="/img/product2_640x426.jpg"></amp-img>
-      <p class="name">Orange</p>
-      <p class="star">★★★★☆</p>
-      <p class="price">$0.99</p>
-    </a><a class="tile" href="#" role="listitem">
-      <amp-img width="640" height="426" layout="responsive" alt="Pear" src="/img/product3_640x426.jpg"></amp-img>
-      <p class="name">Pear</p>
-      <p class="star">★★★☆☆</p>
-      <p class="price">$1.50</p>
-    </a><a class="tile" href="#" role="listitem">
-      <amp-img width="640" height="426" layout="responsive" alt="Banana" src="/img/product4_640x426.jpg"></amp-img>
-      <p class="name">Banana</p>
-      <p class="star">★★★★★</p>
-      <p class="price">$1.50</p>
-    </a>
-    <a class="tile" href="#" role="listitem">
-      <amp-img width="640" height="426" layout="responsive" alt="Apple" src="/img/product1_640x426.jpg"></amp-img>
-      <p class="name">Apple 2</p>
-      <p class="star">★★★★★</p>
-      <p class="price">$1.99</p>
-    </a><a class="tile" href="#" role="listitem">
-      <amp-img width="640" height="426" layout="responsive" alt="Orange" src="/img/product2_640x426.jpg"></amp-img>
-      <p class="name">Orange 2</p>
-      <p class="star">★★★★☆</p>
-      <p class="price">$0.99</p>
-    </a><a class="tile" href="#" role="listitem">
-      <amp-img width="640" height="426" layout="responsive" alt="Pear" src="/img/product3_640x426.jpg"></amp-img>
-      <p class="name">Pear 2</p>
-      <p class="star">★★★☆☆</p>
-      <p class="price">$1.50</p>
-    </a><a class="tile" href="#" role="listitem">
-      <amp-img width="640" height="426" layout="responsive" alt="Banana" src="/img/product4_640x426.jpg"></amp-img>
-      <p class="name">Banana 2</p>
-      <p class="star">★★★★★</p>
-      <p class="price">$1.50</p>
-    </a>
-</amp-carousel>
-
-
+ 
 <h5 class="deals">Bestsellers</h5>
-
 <amp-list class="items"
           width="200"
           height="100"
