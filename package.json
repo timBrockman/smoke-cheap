@@ -7,5 +7,9 @@
     "test": "test"
   },
   "author": "Tim Brockman",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "striptags": "^3.0.1",
+    "superagent": "^3.5.0"
+  }
 }
