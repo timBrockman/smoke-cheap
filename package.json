@@ -4,7 +4,9 @@
   "description": "AMP Product list for Smoke.Cheap",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo 'write some tests'",
+    "build":"rm -rf ./dist/* && cp ./src/index.html ./dist/ && cp ./src/cp/* ./dist/",
+    "dist-stp":"git subtree push --prefix dist origin gh-pages"
   },
   "author": "Tim Brockman",
   "license": "MIT",
