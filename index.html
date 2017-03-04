@@ -125,24 +125,6 @@
 
  
 <h5 class="deals">Bestsellers</h5>
-<amp-list class="items"
-          width="200"
-          height="100"
-          layout="responsive"
-          src="/json/related_products.json">
-  <template type="amp-mustache">
-    <a class="tile item" href="/samples_templates/product/preview/">
-      <amp-img width="640"
-               height="426"
-               layout="responsive"
-               alt="{{name}}"
-               src="{{img}}"></amp-img>
-             <p class="name">{{name}}</p>
-             <p class="star">{{{stars}}}</p>
-             <p class="price">${{price}}</p>
-    </a>
-  </template>
-</amp-list>
 
 
 
@@ -150,7 +132,7 @@
   <script type="application/json">
 {
         "vars": {
-            "account": "UA-80609902-1"
+            "account": "UA-92965494-1"
         },
         "triggers": {
             "default pageview": {
